@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{title}} - {{ sitename }}</title>
+  <link rel="stylesheet" href="{{#each (split this.path '/')}}../{{/each}}_assets/main.css" type="text/css" />
+  <meta name="Generator" value="{{{generatorname}}}" />
+</head>
+<body>
+  <header>
+    <a href="{{{siterurl}}}/">{{ sitename }}</a>
+    <nav class="mainnav">
+      <ul class="menu">
+          {{#each collections}}
+          <li><a class="{{#is @key ../collection}}active{{/is}}" href="{{#each (split ../path '/')}}../{{/each}}{{this.0.path}}">{{@key}}</a></li>
+          {{/each}}
+      </ul>
+    </nav>
+  </header>
+  <article class="container">
+    <div class="maincontent">{{#or (hasOwn this 'previous') (hasOwn this 'next')}}
+    <nav class="collectionnav">
+    {{#if (hasOwn this 'previous')}}<a href="{{#each (split this.path '/')}}../{{/each}}{{{ previous.path }}}">&laquo; {{{previous.title}}}</a>{{/if}}
+    {{#if (hasOwn this 'next') }}<a href="{{#each (split this.path '/')}}../{{/each}}{{{ next.path }}}">{{{next.title}}} &raquo;</a>{{/if}}
+    </nav>{{/or}}
+      <h1><a href="{{{siterurl}}}/{{{path}}}" class="permalink">🔗</a>{{{title}}}</h1>
+  {{{contents}}}
+    </div>
+    {{#if headings}}
+      <aside>
+        <nav class="innernav">
+          <ul>
+            {{#each headings}}
+            <li><a href="#{{this.id}}">{{this.text}}</a></li>
+            {{/each}}
+          </ul>
+        </nav>
+      </aside>
+    {{/if}}
+  </article>
+  <footer>
+    <p>Machined by <a href="{{{generatorurl}}}">{{generatorname}}</a></p>
+  </footer>
+</body>
+</html>

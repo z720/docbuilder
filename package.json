@@ -1,0 +1,59 @@
+{
+  "name": "docbuilder",
+  "version": "1.0.0",
+  "description": "Documentation builder based on Metalsmith",
+  "main": "_lib/cli.js",
+  "bin": {
+    "docbuilder": "_lib/cli.js"
+  },
+  "scripts": {
+    "start": "_lib/cli.js",
+    "test": "nyc mocha"
+  },
+  "author": "z720",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/z720/docbuilder.git"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "circular-json": "^0.3.1",
+    "commander": "^2.9.0",
+    "handlebars": "^4.0.6",
+    "handlebars-helpers": "^0.8.2",
+    "metalsmith": "^2.3.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-headings": "^0.1.0",
+    "metalsmith-include-content": "^1.0.1",
+    "metalsmith-layouts": "^1.8.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-serve": "0.0.7",
+    "metalsmith-watch": "^1.0.3",
+    "node-static": "^0.7.9"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "fs-extra": "^3.0.1",
+    "mocha": "^3.3.0",
+    "nyc": "^10.3.2"
+  },
+  "nyc": {
+    "include": [
+      "_lib/**/*.js"
+    ],
+    "exclude": [
+      "_lib/cli.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary",
+      "html"
+    ],
+    "all": true,
+    "report-dir": "./_coverage"
+  }
+}

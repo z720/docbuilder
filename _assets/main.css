@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Maven+Pro|Questrial|Ubuntu+Mono');
+
+* {
+  box-sizing: content-box;
+}
+
+body {
+    background-color: #fafafa;
+    color: #222222;
+    font-family: 'Questrial', 'Maven Pro', Helvetica,Arial,sans-serif;
+    font-size: 16px;
+  }
+
+@media screen {
+  body {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;
+    margin:0;
+    padding:0;
+  }
+  
+  .lh {
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAYCAYAAADQ+yzZAAAAF0lEQVQYV2NkgALG4cEoLy//39nZyQgAHvQEGSEIElQAAAAASUVORK5CYII=);
+  }
+  
+  header, footer {
+    padding: 1.2em 10px;
+    background-color: white;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: right;
+    font-size: 1.2em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  
+  /* TODO: Move to flexbox */
+  header > a {
+    float:left;
+    display: block;
+    padding: 0 20px;
+    line-height: 1.5em;
+  }
+  
+  header .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+  }
+  
+  header .menu li {
+    display: inline-block;
+  }
+  
+  header .menu li + li:before {
+    display: inline-block;
+    content: "|";
+    padding-right: 0.5ex;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 1.5em 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 912px;
+    min-width: 320px;
+    width: 100%;
+  }
+  
+  .container > .maincontent {
+    flex: 1 0 auto;
+  }
+  
+  .maincontent > h1 > a.permalink {
+    display: none;
+  }
+  
+  nav.collectionnav {
+    display: flex;
+    line-height: 1.5em;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .container > aside, 
+  .container > nav {
+    flex: 0 0 200px;
+    background: #f2f2f2;
+    padding: 20px;
+  }
+  aside ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+/* Rythm */
+p {
+  font-size: 1em; /* 16px */
+  line-height: 1.5000em; /* 24px */
+  margin: 0;
+}
+
+* + p {
+    margin-top: 1.5000em;
+}
+
+li ol, li ul {
+  margin-top:0;
+}
+
+li {
+  line-height: 1.5em;
+}
+
+/* 40px - The quick brown fox jumps over the lazy dog */
+h1 {
+  font-size: 2.5000em; /* 40px */
+  line-height: 1.2000em; /* 48px */
+  margin-top: 0.6000em;  margin-bottom: 0;
+}
+blockquote + h1, pre + h1 {
+  margin-top: 0.3000em;
+}
+/* 32px - The quick brown fox jumps over the lazy dog */
+h2 {
+  font-size: 2.0000em; /* 32px */
+  line-height: 1.5000em; /* 48px */
+  margin-top: 0.7500em;  margin-bottom: 0;
+}
+blockquote + h2, pre + h2 {
+  margin-top: 0.3750em;
+}
+/* 30px - The quick brown fox jumps over the lazy dog */
+h3 {
+  font-size: 1.8750em; /* 30px */
+  line-height: 1.6000em; /* 48px */
+  margin-top: 0.8000em;  margin-bottom: 0;
+}
+blockquote + h3, pre + h3 {
+  margin-top: 0.4000em;
+}
+/* 24px - The quick brown fox jumps over the lazy dog */
+h4 {
+  font-size: 1.5000em; /* 24px */
+  line-height: 1.0000em; /* 24px */
+  margin-top: 1.0000em;  margin-bottom: 0;
+}
+blockquote + h4, pre + h4 {
+  margin-top: 0.5em;
+}
+
+/* 20px - The quick brown fox jumps over the lazy dog */
+h5 {
+  font-size: 1.2500em; /* 20px */
+  line-height: 1.2000em; /* 24px */
+  margin-top: 1.2000em;  margin-bottom: 0;
+}
+blockquote + h5, pre + h5 {
+  margin-top: 0.6em;
+}
+/* 16px - The quick brown fox jumps over the lazy dog */
+h6 {
+  font-size: 1.0000em; /* 16px */
+  line-height: 1.5000em; /* 24px */
+  margin-top: 1.5000em;  margin-bottom: 0;
+  font-weight: bold;
+}
+blockquote + h6, pre + h6 {
+  margin-top: 0.75em;
+}
+
+h1, h2, h3, h4, h5 , h6 {
+  font-family: 'Abril Fatface', cursive;
+  /* don't break rythm with a pixel border
+  border-bottom: 1px solid #f2f2f2; /**/
+  box-shadow: 0 1px 0 #00baff;   
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+a {
+    color: #00baff;
+    text-decoration: underline;
+}
+header a {
+  text-decoration: none;
+}
+header a:hover, header a:focus {
+  text-decoration: underline;
+}
+
+ul, ol, dl {
+  margin: 0;
+}
+blockquote, pre {
+  background-color: #f2f2f2;
+  border-left: 10px solid #e2e2e2;
+  line-height: 1.5em;
+  margin: 0.75em 0;
+  padding: 0.75em 20px 0.75em 10px;
+}
+blockquote + p, pre + p {
+  margin-top: 0.75em;
+}
+
+blockquote:before {
+    content: "\201D"; /* right double quotation mark */
+    float: right;
+    color: #e2e2e2;
+    font-size: 10em;
+    margin-right: -0.15em;
+    font-family: 'Abril Fatface', cursive;
+    margin-top: 0.20em;
+}
+
+code, kbd, samp {
+  background-color: #f2f2f2;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+tt, code, kbd, samp,
+pre, xmp, plaintext, listing  {
+  font-family: 'Ubuntu Mono', monospace;
+}
+hr:before {
+  display: block;
+  margin: 0 0 1.5em 0;
+  box-shadow: 0 2px 0 #00baff;
+  content: "\00a0";
+  line-height: 1.5em;
+}
+hr {
+  border:none;
+  margin: 0;
+}
+/* Tables */ 
+table {
+  margin: 1.5em 0;
+  margin: calc(1.5em - 3px) 0;
+}
+
+thead {
+  border-bottom: 2px solid;
+}
+tfooter {
+  border-top: 2px solid;
+}
+td, th {
+  padding: 0 5px;
+  line-height: 1.5em;
+  line-height: calc(1.5em - 3px);
+}
+* + th,
+* + td {
+  border-left: 1px solid #00baff;
+}
+td, th {
+  border-bottom: 1px solid #00baff;
+}
+
+@media print {
+  @page { margin: 0; }
+  body { 
+    margin: 1.6cm; 
+  }
+  
+  header, footer {
+    display: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre {
+    page-break-inside: avoid;
+  }
+  .maincontent  a[href^='#'] {
+    content: "*";
+    display: inline;
+  }
+  .maincontent a[href]:not([href^='#']):after {
+    content: " [" attr(href) "]";
+    display: inline;
+    font-size: 75%;
+  }
+  
+  .maincontent > h1 > a.permalink {
+    display: block;
+    font-size: 0.4em; /* body size*/
+    font-weight: normal;
+    text-decoration: none;
+  }
+  .maincontent > h1 > a.permalink:after {
+    content: " " attr(href);
+    display: inline;
+  }
+  
+}

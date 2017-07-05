@@ -8,8 +8,7 @@
   },
   "scripts": {
     "start": "_lib/cli.js",
-    "test": "nyc mocha",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
+    "test": "nyc mocha && codecov",
   },
   "author": "z720",
   "license": "MPL-2.0",
@@ -38,6 +37,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "codecov": "^2.2.0",
     "fs-extra": "^3.0.1",
     "mocha": "^3.3.0",
     "nyc": "^10.3.2"

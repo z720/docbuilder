@@ -8,10 +8,11 @@
   },
   "scripts": {
     "start": "_lib/cli.js",
-    "test": "nyc mocha && codecov",
+    "test": "nyc mocha && codecov"
   },
   "author": "z720",
   "license": "MPL-2.0",
+  "url" : "https://github.com/z720/docbuilder/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/z720/docbuilder.git"

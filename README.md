@@ -1,4 +1,5 @@
-# Docbuilder
+[![Build Status](https://travis-ci.org/z720/docbuilder.svg?branch=master)](https://travis-ci.org/z720/docbuilder) [![codecov](https://codecov.io/gh/z720/docbuilder/branch/master/graph/badge.svg)](https://codecov.io/gh/z720/docbuilder)
+# Docbuilder 
 
 Docbuilder is a Metalsmith wrapper for quick out of the box generation of document sites.
 Just place your Markdown pages in the `doc/` folder and `docbuilder` will create a static site in the `_build` folder.
